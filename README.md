@@ -1,6 +1,6 @@
 # sma-web-parser
 ## Intention
-This is a parser which parses the power value of your sma inverter web interface. You may ask, why parse the value from the web interface when there is a modbus interface. Sadly our sma inverter came with modbus disabled. To enable it, you would need the installers password, which I was not given. So no modbus for me :( Also some old sma inverters came without modbus support at all.
+This is a parser which parses the power value of your sma inverter web interface. You may ask, why parse the value from the web interface when there is a modbus interface. Sadly my sma inverter came with modbus disabled. To enable it, you would need the installers password, which I was not given. So no modbus for me :( Also some old sma inverters came without modbus support at all.
 
 ## Installation
 
