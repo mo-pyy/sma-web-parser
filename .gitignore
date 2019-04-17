@@ -1,0 +1,6 @@
+build/lib/sma.py
+dist/sma_web_parser-0.0.1-py3.7.egg
+sma_web_parser.egg-info/PKG-INFO
+sma_web_parser.egg-info/SOURCES.txt
+sma_web_parser.egg-info/dependency_links.txt
+sma_web_parser.egg-info/top_level.txt
