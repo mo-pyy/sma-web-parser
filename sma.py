@@ -3,7 +3,7 @@ from time import strftime, localtime, sleep
 import requests, json, csv, os.path
 
 class parser:
-    def __init__(self, ip, password, requests_delay = 20, moving_average_size = 300, data_dir = '', log=True):
+    def __init__(self, ip, password, requests_delay = 20, moving_average_size = 300, data_dir = '', log=False):
         self.details = {"right":"usr","pass":password}
         self.ip = ip
         self.requests_delay = requests_delay
@@ -13,8 +13,8 @@ class parser:
         self.sid = ''
         self.value = 0
         if log:
-            if os.path.isfile(self.data_dir+'main.csv') == False:
-                file = open(self.data_dir+'main.csv', 'w')
+            if os.path.isfile(self.data_dir+'log.csv') == False:
+                file = open(self.data_dir+'log.csv', 'w')
                 file.close()
         self.authenticate()
         loop_thread = Thread(target=self.loop)
@@ -59,7 +59,7 @@ class parser:
                     date =  strftime("%d.%m.%Y", localtime())
                     day =  strftime("%A", localtime())
                     prevminute =  minute  
-                    file = open(self.data_dir+"main.csv", "a")
+                    file = open(self.data_dir+"log.csv", "a")
                     file.write(str(all / len(values)) + ";" + times + ";" + date + ";" + day + ";\n")
                     file.close
                 sleep(self.requests_delay)
